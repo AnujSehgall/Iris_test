@@ -36,6 +36,7 @@ public class Login extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        startService(new Intent(getBaseContext(),Servicee.class));
         ButterKnife.inject(this);
     }
 

@@ -70,10 +70,23 @@ public class Arm_Disarm extends AppCompatActivity {
 
                 if(LockUnlck.isChecked())
                 {
-                    Toast.makeText(Arm_Disarm.this, "Switch is on", Toast.LENGTH_LONG).show();
+                    String message = "lock" ;
+                   // Toast.makeText(Arm_Disarm.this, message, Toast.LENGTH_LONG).show();
+                    try {
+                        client.publish(topic, message.getBytes(),0,false);
+                    } catch (MqttException e) {
+                        e.printStackTrace();
+                    }
+
                 }
                 else {
-                    Toast.makeText(Arm_Disarm.this, "Switch is Off", Toast.LENGTH_LONG).show();
+                    String message = "unlock" ;
+                   // Toast.makeText(Arm_Disarm.this, message, Toast.LENGTH_LONG).show();
+                    try {
+                        client.publish(topic, message.getBytes(),0,false);
+                    } catch (MqttException e) {
+                        e.printStackTrace();
+                    }
                 }
 
             }
@@ -121,6 +134,7 @@ public class Arm_Disarm extends AppCompatActivity {
             @Override
             public void messageArrived(String topic, MqttMessage message) throws Exception {
                 //textView.setText(new String(message.getPayload()));
+                Toast.makeText(Arm_Disarm.this, new String(message.getPayload()), Toast.LENGTH_LONG).show();
 
             }
 
