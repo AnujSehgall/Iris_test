@@ -22,11 +22,18 @@
             </intent-filter>
         </activity>
         <activity android:name=".MainActivity" />
-
-        <activity android:name=".Seekbar_act"></activity>
-        <activity android:name=".RegisterActivity"
+        <activity android:name=".Seekbar_act" />
+        <activity
+            android:name=".RegisterActivity"
             android:theme="@style/Translucent" />
-        <activity android:name=".LoginSuccessActivity"></activity>
+        <activity android:name=".LoginSuccessActivity" />
+        <activity android:name=".Arm_Disarm"></activity>
+        <dependency>
+            <groupId>us.belka</groupId>
+            <artifactId>androidtoggleswitch</artifactId>
+            <version>1.2.2</version>
+            <type>pom</type>
+        </dependency>
     </application>
 
 </manifest>

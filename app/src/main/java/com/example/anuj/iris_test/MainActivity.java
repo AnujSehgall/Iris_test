@@ -1,11 +1,13 @@
 package com.example.anuj.iris_test;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.MediaController;
+import android.widget.SeekBar;
 import android.widget.Toast;
 import android.widget.VideoView;
 import android.net.Uri;
@@ -17,11 +19,44 @@ public class MainActivity extends ActionBarActivity {
     Button btnConnect;
     VideoView streamView;
     MediaController mediaController;
+    SeekBar seek2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        seek2 = (SeekBar) findViewById(R.id.seekBar2);
+
+
+
+        Button btn = (Button) findViewById(R.id.video);
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(MainActivity.this,Arm_Disarm.class);
+                startActivity(i);
+            }
+        });
+
+        seek2.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                Toast.makeText(getApplicationContext(),"seekbar progress: "+progress, Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+
+            }
+        });
+
+
 
         addrField = (EditText)findViewById(R.id.addr);
         btnConnect = (Button)findViewById(R.id.connect);

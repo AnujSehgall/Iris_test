@@ -62,7 +62,7 @@ public class Login extends AppCompatActivity {
                     getWindow().setExitTransition(explode);
                     getWindow().setEnterTransition(explode);
                     ActivityOptionsCompat oc2 = ActivityOptionsCompat.makeSceneTransitionAnimation(this);
-                    Intent i2 = new Intent(this, Seekbar_act.class);
+                    Intent i2 = new Intent(this, Arm_Disarm.class);
                     startActivity(i2, oc2.toBundle());
                     finish();
                     break;

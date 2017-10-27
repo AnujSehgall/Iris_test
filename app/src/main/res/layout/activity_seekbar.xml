@@ -28,23 +28,5 @@
 
     </FrameLayout>
 
-    <SeekBar
-        android:id="@+id/seekBar2"
-        style="@style/Widget.AppCompat.SeekBar.Discrete"
-        android:layout_width="368dp"
-        android:layout_height="wrap_content"
-        android:max="10"
-        android:progress="3"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="282dp"
-        android:layout_above="@+id/video"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="35dp" />
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/video"
-        android:text="Video view"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
+
 </RelativeLayout>

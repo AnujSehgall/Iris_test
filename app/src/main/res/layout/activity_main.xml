@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/black_overlay"
     tools:context="com.example.anuj.iris_test.MainActivity" >
 
 
@@ -19,6 +20,60 @@
     <VideoView
         android:id="@+id/streamview"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="200dp" />
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
 
+    <Button
+        android:id="@+id/btn1"
+        android:layout_width="80dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="28dp"
+        android:text="Connect"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:id="@+id/btn2"
+        android:layout_width="80dp"
+        android:layout_height="60dp"
+        android:text="Connect"
+        android:layout_alignBaseline="@+id/btn1"
+        android:layout_alignBottom="@+id/btn1"
+        android:layout_alignEnd="@+id/video" />
+
+    <Button
+        android:id="@+id/btn3"
+        android:layout_width="80dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:text="Connect" />
+
+
+
+    <SeekBar
+        android:id="@+id/seekBar2"
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
+        android:layout_width="368dp"
+        android:layout_height="wrap_content"
+        android:max="10"
+        android:layout_marginTop="120dp"
+        android:progress="3"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="282dp"
+        android:layout_above="@+id/video"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="35dp" />
+
+    <Button
+        android:id="@+id/video"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="Screenshot" />
+
+</RelativeLayout>
 </LinearLayout>
