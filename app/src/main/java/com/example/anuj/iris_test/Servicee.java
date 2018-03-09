@@ -32,12 +32,12 @@ public class Servicee extends Service {
 
     int i = 0;
 
-    String host = "tcp://m11.cloudmqtt.com:16201";
+    String host = "tcp://m13.cloudmqtt.com:13476";
     // String clientId = "ExampleAndroidClient";
-    String topic = "sensor/snd";
+    String topic = "top";
 
-    String username = "rcduaeoh";
-    String password = "hm3O7P_0KiXi";
+    String username = "ptbelqhi";
+    String password = "wdJXMPWzv6Q5";
 
     MqttAndroidClient client;
     IMqttToken token = null;
